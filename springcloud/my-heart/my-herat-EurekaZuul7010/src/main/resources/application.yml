@@ -1,0 +1,15 @@
+server:
+  port: 7010
+spring:  application:    name: myheart-zuul7010
+#eureka客户端
+eureka:                                                     
+  client:   #客户端注册进eureka服务列表                                                
+    serviceUrl:     #这里填写的是服务注册中心地址
+      defaultZone: http://localhost:7001/eureka/ #单机版
+  instance:
+    instance-id: myheart-zuul7009       #自定义服务名称信息   
+    prefer-ip-address: true   #访问路径可以显示ip地址
+#zuul路由 zuul:
+#  prefix: /mck                      #所有路由前缀  routes:                           #路由管理:    myzuul:                         #第一个路由映射路径 myzuul
+      path: /myzuul/**
+      serviceId: myheart-install    #对应的客户端的application.name名称

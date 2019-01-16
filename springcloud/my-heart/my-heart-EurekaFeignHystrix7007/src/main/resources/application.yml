@@ -1,0 +1,16 @@
+server:
+  port: 7007
+spring:
+  application:
+    name: myheart-feign-hystrix
+eureka:                                                     
+  client:   #客户端注册进eureka服务列表                                                
+    serviceUrl:     #这里填写的是服务注册中心地址
+      defaultZone: http://localhost:7001/eureka/ #单机版
+  instance:
+    instance-id: myheart-feign-hystrix       #自定义服务名称信息   
+    prefer-ip-address: true  #访问路径可以显示ip地址
+#Spring Cloud之前的Brixton版本中，Feign是缺省是自动激活了断路器的，但最近的Dalston版本已经将缺省配置修改为禁止
+feign:  #Feign是自带断路器的，在D版本的Spring Cloud之后，它没有默认打开。需要在配置文件中配置打开它
+  hystrix: 
+    enabled: true

@@ -1,0 +1,17 @@
+server:
+  port: 8001
+#配置spring mvc视图解析器 
+spring: 
+  mvc:                                                      
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+#mysql相关配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver #mysql驱动
+    url: jdbc:mysql://localhost:3306/db_spring?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=GMT%2B8
+    password: 123456    username: root
+#spring整合mybatis      
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml  mapper-locations: classpath:mybatis/mapper/*.xml       #对应mapper.xml映射文件所在路径
+  type-aliases-package: com.itmck.api.pojo    #对应的包下的pojo可以在xml中使用别名

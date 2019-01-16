@@ -1,0 +1,10 @@
+com\itmck\api\exception\NoRoleException.class
+com\itmck\api\pojo\Student.class
+com\itmck\api\anno\RoleInterceptor.class
+com\itmck\api\pojo\NumEnum.class
+com\itmck\api\commons\BaseMapper.class
+com\itmck\api\anno\RoleSign.class
+com\itmck\api\utils\XStreamUtil.class
+com\itmck\api\commons\BaseController.class
+com\itmck\api\pojo\IdentityEnum.class
+com\itmck\api\pojo\User.class

@@ -1,0 +1,12 @@
+server:
+  port: 7004
+spring:
+  application:
+    name: myheart-ribbon
+eureka:                                                     
+  client:   #客户端注册进eureka服务列表                                                
+    serviceUrl:     #这里填写的是服务注册中心地址
+      defaultZone: http://localhost:7001/eureka/ #单机版
+  instance:
+    instance-id: myheart-ribbon       #自定义服务名称信息   
+    prefer-ip-address: true   #访问路径可以显示ip地址

@@ -1,0 +1,16 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: myheart-eureka7001
+
+eureka:
+  instance:
+    hostname: eureka7001 #eureka服务端实例名称
+  client:
+    registerWithEureka: false #false表示7001不向注册中心注册自己
+    fetchRegistry: false  #false表示自己就是注册中心,我的职责就是维护服务实例.并不需要去检索服务
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #设置与eureka单机版 server交互的地址查询和注册服务
+    
